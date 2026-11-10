@@ -1250,7 +1250,7 @@ namespace SSS_Settings
 		if (engine.type === SSS.SearchEngineType.SSS) {
 			// special SSS icons have data that never changes, so just get it from constants
 			const sssIcon = sssIcons[(engine as SSS.SearchEngine_SSS).id];
-			iconImgSource = browser.extension.getURL(sssIcon.iconPath);
+			iconImgSource = browser.runtime.getURL(sssIcon.iconPath);
 		} else {
 			iconImgSource = (engine as SSS.SearchEngine_NonSSS).iconUrl;
 		}

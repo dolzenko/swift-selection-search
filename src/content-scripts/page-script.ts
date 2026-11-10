@@ -870,7 +870,7 @@ namespace PopupCreator
 					const sssEngine = engine as SSS.SearchEngine_SSS;
 					const sssIcon = sssIcons[sssEngine.id];
 
-					const iconImgSource = browser.extension.getURL(sssIcon.iconPath);
+					const iconImgSource = browser.runtime.getURL(sssIcon.iconPath);
 					const isInteractive = sssIcon.isInteractive !== false;	// undefined or true means it's interactive
 					icon = this.setupEngineIcon(sssEngine, iconImgSource, sssIcon.name, isInteractive, settings);
 
